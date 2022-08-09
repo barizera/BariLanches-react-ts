@@ -71,7 +71,7 @@ export const SearchSpot = styled.div`
 `;
 
 export const CategoriesNavBar = styled.div`
-  width: 100%;
+  width: 95%;
   padding: 0 2rem;
   box-sizing: border-box;
   height: 3vh;
@@ -105,6 +105,9 @@ export const ProductsHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  h2 {
+    margin-left: 2rem;
+  }
 `;
 
 export const TableSelect = styled.select`

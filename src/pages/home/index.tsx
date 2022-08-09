@@ -35,7 +35,7 @@ const Home = () => {
           <h2>Escolha seu lanche</h2>
           <Styled.TableSelect defaultValue="">
             <option value="" disabled>
-              Esolha a mesa
+              Escolha a mesa
             </option>
             <option value="1">Mesa 01</option>
             <option value="2">Mesa 02</option>
