@@ -21,17 +21,27 @@ const Home = () => {
           </Styled.SearchSpot>
         </Styled.HomeContentHeader>
         <section>
-          <p>Lanches</p>
+          <Styled.CategoriesNavBar>
+            <Styled.CategoriesNavBarButton active>
+              Salgados
+            </Styled.CategoriesNavBarButton>
+            <Styled.CategoriesNavBarButton>Doces</Styled.CategoriesNavBarButton>
+            <Styled.CategoriesNavBarButton>
+              Bebidas
+            </Styled.CategoriesNavBarButton>
+          </Styled.CategoriesNavBar>
         </section>
-        <div>
+        <Styled.ProductsHeader>
           <h2>Escolha seu lanche</h2>
-          <select>
-            <option value="Default">Escolha uma categoria</option>
-            <option value="Sanduíche">Sanduíche</option>
-            <option value="Sucos">Sucos</option>
-            <option value="Pizza">Pizza</option>
-            <option value="Salgados">Salgados</option>
-          </select>
+          <Styled.TableSelect defaultValue="">
+            <option value="" disabled>
+              Esolha a mesa
+            </option>
+            <option value="1">Mesa 01</option>
+            <option value="2">Mesa 02</option>
+            <option value="3">Mesa 03</option>
+            <option value="4">Mesa 04</option>
+          </Styled.TableSelect>
           <div>
             <div>Card</div>
             <div>Card</div>
@@ -39,7 +49,7 @@ const Home = () => {
             <div>Card</div>
             <div>Card</div>
           </div>
-        </div>
+        </Styled.ProductsHeader>
       </Styled.HomeContentContainer>
       <aside>
         Aside pedidos
