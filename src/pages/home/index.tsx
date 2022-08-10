@@ -4,8 +4,23 @@ import * as Styled from "./styles";
 import { DateTime } from "luxon";
 import { mockedProducts } from "../../mocks";
 import ProductList from "../../components/ProductsList";
+import { mockedCategories } from "../../mocks";
+import { useState } from "react";
+import { Category, Product } from "../../types";
 
 const Home = () => {
+  const [selectedCategory, setSelectedCategory] = useState<Category>(
+    mockedCategories[0]
+  );
+
+  const filteredProducts: Product[] = mockedProducts.filter(
+    (element) => element.categoryId === selectedCategory.id
+  );
+
+  const handleChangeCategory = (category: Category) => {
+    setSelectedCategory(category);
+  };
+
   const actualDate = DateTime.now();
   const formatedDate = `${actualDate.weekdayLong}, ${actualDate.day} ${actualDate.monthLong} ${actualDate.year}`;
   return (
@@ -24,13 +39,16 @@ const Home = () => {
         </Styled.HomeContentHeader>
         <section>
           <Styled.CategoriesNavBar>
-            <Styled.CategoriesNavBarButton active>
-              Salgados
-            </Styled.CategoriesNavBarButton>
-            <Styled.CategoriesNavBarButton>Doces</Styled.CategoriesNavBarButton>
-            <Styled.CategoriesNavBarButton>
-              Bebidas
-            </Styled.CategoriesNavBarButton>
+            {mockedCategories.map((element) => {
+              return (
+                <Styled.CategoriesNavBarButton
+                  active={element.name === selectedCategory.name}
+                  onClick={() => handleChangeCategory(element)}
+                >
+                  {element.name}
+                </Styled.CategoriesNavBarButton>
+              );
+            })}
           </Styled.CategoriesNavBar>
           <Styled.ProductsHeader>
             <h2>Escolha seu lanche</h2>
@@ -44,7 +62,7 @@ const Home = () => {
               <option value="4">Mesa 04</option>
             </Styled.TableSelect>
           </Styled.ProductsHeader>
-          <ProductList list={mockedProducts} />
+          <ProductList list={filteredProducts} />
         </section>
       </Styled.HomeContentContainer>
       <aside>
