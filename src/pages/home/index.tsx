@@ -2,6 +2,8 @@ import { SearchIcon } from "../../assets/icon";
 import Menu from "../../components/Menu";
 import * as Styled from "./styles";
 import { DateTime } from "luxon";
+import { mockedProducts } from "../../mocks";
+import ProductList from "../../components/ProductsList";
 
 const Home = () => {
   const actualDate = DateTime.now();
@@ -30,26 +32,20 @@ const Home = () => {
               Bebidas
             </Styled.CategoriesNavBarButton>
           </Styled.CategoriesNavBar>
+          <Styled.ProductsHeader>
+            <h2>Escolha seu lanche</h2>
+            <Styled.TableSelect defaultValue="">
+              <option value="" disabled>
+                Escolha a mesa
+              </option>
+              <option value="1">Mesa 01</option>
+              <option value="2">Mesa 02</option>
+              <option value="3">Mesa 03</option>
+              <option value="4">Mesa 04</option>
+            </Styled.TableSelect>
+          </Styled.ProductsHeader>
+          <ProductList list={mockedProducts} />
         </section>
-        <Styled.ProductsHeader>
-          <h2>Escolha seu lanche</h2>
-          <Styled.TableSelect defaultValue="">
-            <option value="" disabled>
-              Escolha a mesa
-            </option>
-            <option value="1">Mesa 01</option>
-            <option value="2">Mesa 02</option>
-            <option value="3">Mesa 03</option>
-            <option value="4">Mesa 04</option>
-          </Styled.TableSelect>
-          <div>
-            <div>Card</div>
-            <div>Card</div>
-            <div>Card</div>
-            <div>Card</div>
-            <div>Card</div>
-          </div>
-        </Styled.ProductsHeader>
       </Styled.HomeContentContainer>
       <aside>
         Aside pedidos

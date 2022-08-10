@@ -1,15 +1,15 @@
 import * as T from "../types";
-import burguerCarneEFrango from "../assets/images/burguer-carne-e-frango.png";
-import burguerDuploBaconCheddar from "../assets/images/burguer-duplo-bacon-cheddar.png";
-import burguerDuploBacon from "../assets/images/burguer-duplo-bacon.png";
-import burguerDuploRanch from "../assets/images/burguer-duplo-ranch.png";
-import burguerSaladaQueijo from "../assets/images/burguer-salada-queijo.png";
-import burguerSalada from "../assets/images/burguer-salada.png";
-import agua from "../assets/images/agua.png";
-import batataFritaP from "../assets/images/batata-frita-p.png";
-import batataFritaG from "../assets/images/batata-frita-g.png";
-import cocaGarrafa from "../assets/images/coca-garrafa.png";
-import cocaLata from "../assets/images/coca-lata.png";
+import burguerCarneEFrango from "../assets/img/burguer-carne-e-frango.png";
+import burguerDuploBaconCheddar from "../assets/img/burguer-duplo-bacon-cheddar.png";
+import burguerDuploBacon from "../assets/img/burguer-duplo-bacon.png";
+import burguerDuploRanch from "../assets/img/burguer-duplo-ranch.png";
+import burguerSaladaQueijo from "../assets/img/burguer-salada-queijo.png";
+import burguerSalada from "../assets/img/burguer-salada.png";
+import agua from "../assets/img/agua.png";
+import batataFritaP from "../assets/img/batata-frita-p.png";
+import batataFritaG from "../assets/img/batata-frita-g.png";
+import cocaGarrafa from "../assets/img/coca-garrafa.png";
+import cocaLata from "../assets/img/coca-lata.png";
 
 export const mockedProducts: T.Product[] = [
   {
