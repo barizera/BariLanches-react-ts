@@ -7,6 +7,7 @@ import ProductList from "../../components/ProductsList";
 import { mockedCategories } from "../../mocks";
 import { useState } from "react";
 import { Category, Product } from "../../types";
+import OrderDetails from "../../components/OrderDetails";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category>(
@@ -16,10 +17,6 @@ const Home = () => {
   const filteredProducts: Product[] = mockedProducts.filter(
     (element) => element.categoryId === selectedCategory.id
   );
-
-  const handleChangeCategory = (category: Category) => {
-    setSelectedCategory(category);
-  };
 
   const actualDate = DateTime.now();
   const formatedDate = `${actualDate.weekdayLong}, ${actualDate.day} ${actualDate.monthLong} ${actualDate.year}`;
@@ -43,7 +40,7 @@ const Home = () => {
               return (
                 <Styled.CategoriesNavBarButton
                   active={element.name === selectedCategory.name}
-                  onClick={() => handleChangeCategory(element)}
+                  onClick={() => setSelectedCategory(element)}
                 >
                   {element.name}
                 </Styled.CategoriesNavBarButton>
@@ -65,39 +62,7 @@ const Home = () => {
           <ProductList list={filteredProducts} />
         </section>
       </Styled.HomeContentContainer>
-      <aside>
-        Aside pedidos
-        <header>
-          <h2>Número do Pedido</h2>
-          <div>
-            <button>Retirada no balcão</button>
-            <button>P/ Viagem</button>
-            <button>Delivery</button>
-          </div>
-        </header>
-        <div>
-          <h3>Item</h3>
-          <h3>Qntd</h3>
-          <h3>Preço</h3>
-        </div>
-        <div>
-          <div>Card Checkout</div>
-          <div>Card Checkout</div>
-          <div>Card Checkout</div>
-        </div>
-        <div>
-          <div>
-            <p>Desconto:</p>
-            <p>R$0</p>
-          </div>
-          <div>
-            <p>Sub total:</p>
-            <p>R$55,00</p>
-          </div>
-          <p>Escolha a mesa primeiro</p>
-        </div>
-        <button>Continue para o pagamento</button>
-      </aside>
+      <OrderDetails />
     </Styled.HomeContainer>
   );
 };
