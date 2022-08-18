@@ -7,22 +7,24 @@ const OrderDetails = () => {
       <Styled.OrderDetailsHeader>
         <h2>Pedido #1</h2>
         <div>
-          <button>Retirada no balcão</button>
-          <button>P/ Viagem</button>
-          <button>Delivery</button>
+          <Button text="Retirada no balcão" size="small" />
+          <Button text="P/viagem" size="small" variant="disable" />
+          <Button text="Delivery" size="small" variant="disable" />
         </div>
       </Styled.OrderDetailsHeader>
-      <div>
-        <h3>Item</h3>
-        <h3>Qntd</h3>
-        <h3>Preço</h3>
-      </div>
-      <div>
-        <div>Card Checkout</div>
-        <div>Card Checkout</div>
-        <div>Card Checkout</div>
-      </div>
-      <div>
+      <Styled.CheckoutDetailsContainer>
+        <Styled.CheckoutDetailsHeader>
+          <h3>Item</h3>
+          <h3>Qntd</h3>
+          <h3>Preço</h3>
+        </Styled.CheckoutDetailsHeader>
+        <div>
+          <div>Card Checkout</div>
+          <div>Card Checkout</div>
+          <div>Card Checkout</div>
+        </div>
+      </Styled.CheckoutDetailsContainer>
+      <Styled.OrderDetailsFooter>
         <div>
           <p>Desconto:</p>
           <p>R$0</p>
@@ -31,9 +33,12 @@ const OrderDetails = () => {
           <p>Sub total:</p>
           <p>R$55,00</p>
         </div>
-        <p>Escolha a mesa primeiro</p>
-      </div>
-      <Button text="Continue para pagamento" onClick={() => {}} size="large" />
+        <Button
+          text="Continue para pagamento"
+          onClick={() => {}}
+          size="large"
+        />
+      </Styled.OrderDetailsFooter>
     </Styled.OrderDetailsContainer>
   );
 };

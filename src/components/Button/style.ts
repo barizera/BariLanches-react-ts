@@ -41,7 +41,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
 
     ${size === "large" &&
     css`
-      width: 20rem;
+      width: 24rem;
     `}
   `}
 `;
