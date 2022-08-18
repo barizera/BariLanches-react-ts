@@ -8,6 +8,7 @@ interface MenuItemProps {
 export const MenuAside = styled.div`
   height: 100vh;
   min-width: 6.5rem;
+  max-width: 8vw;
   background-color: #28292a;
   display: flex;
   flex-direction: column;

@@ -1,15 +1,15 @@
 import * as T from "../types";
-import burguerCarneEFrango from "../assets/images/burguer-carne-e-frango.png";
-import burguerDuploBaconCheddar from "../assets/images/burguer-duplo-bacon-cheddar.png";
-import burguerDuploBacon from "../assets/images/burguer-duplo-bacon.png";
-import burguerDuploRanch from "../assets/images/burguer-duplo-ranch.png";
-import burguerSaladaQueijo from "../assets/images/burguer-salada-queijo.png";
-import burguerSalada from "../assets/images/burguer-salada.png";
-import agua from "../assets/images/agua.png";
-import batataFritaP from "../assets/images/batata-frita-p.png";
-import batataFritaG from "../assets/images/batata-frita-g.png";
-import cocaGarrafa from "../assets/images/coca-garrafa.png";
-import cocaLata from "../assets/images/coca-lata.png";
+import burguerCarneEFrango from "../assets/img/burguer-carne-e-frango.png";
+import burguerDuploBaconCheddar from "../assets/img/burguer-duplo-bacon-cheddar.png";
+import burguerDuploBacon from "../assets/img/burguer-duplo-bacon.png";
+import burguerDuploRanch from "../assets/img/burguer-duplo-ranch.png";
+import burguerSaladaQueijo from "../assets/img/burguer-salada-queijo.png";
+import burguerSalada from "../assets/img/burguer-salada.png";
+import agua from "../assets/img/agua.png";
+import batataFritaP from "../assets/img/batata-frita-p.png";
+import batataFritaG from "../assets/img/batata-frita-g.png";
+import cocaGarrafa from "../assets/img/coca-garrafa.png";
+import cocaLata from "../assets/img/coca-lata.png";
 
 export const mockedProducts: T.Product[] = [
   {
@@ -84,7 +84,7 @@ export const mockedProducts: T.Product[] = [
     description: "Porção de batata frita com 200g.",
     price: 12.99,
     image: batataFritaP,
-    categoryId: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    categoryId: "731b7290-54c7-4f3c-80bf-fecefd2e08ea",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
@@ -94,7 +94,7 @@ export const mockedProducts: T.Product[] = [
     description: "Porção de batata frita com 700g.",
     price: 22.99,
     image: batataFritaG,
-    categoryId: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    categoryId: "731b7290-54c7-4f3c-80bf-fecefd2e08ea",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
@@ -133,13 +133,13 @@ export const mockedProducts: T.Product[] = [
 export const mockedCategories: T.Category[] = [
   {
     id: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
-    name: "Lanches",
+    name: "Sanduiches",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    id: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
-    name: "Porções",
+    id: "731b7290-54c7-4f3c-80bf-fecefd2e08ea",
+    name: "Batatas",
     createdAt: new Date(),
     updatedAt: new Date(),
   },

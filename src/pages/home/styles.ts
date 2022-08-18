@@ -116,4 +116,5 @@ export const TableSelect = styled.select`
   background-color: #fc9655;
   border-radius: 8px;
   color: #28292a;
+  margin-right: 3rem;
 `;
